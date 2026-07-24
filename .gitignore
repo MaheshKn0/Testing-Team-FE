@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+package-lock.json
+
+# Vite production build output
+dist/
+dist-ssr/
+
+# Vite cache & local tracking
+.vite/
+.nuxt/
+.cache/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment variables (Secrets)
+.env
+.env.local
+.env.*.local
+
+# Optional: Un-ignore specific env files if they only contain safe defaults
+! .env.example
+
+# Serverless / Framework outputs
+.serverless/
+.kora/
+
+# Editor-specific directories (VS Code, WebStorm, etc.)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Operating System files
+.DS_Store
+Thumbs.db
