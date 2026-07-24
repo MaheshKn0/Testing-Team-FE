@@ -57,6 +57,15 @@ export default function DeleteAccountForm({ environment }: DeleteAccountFormProp
     setLoading(false);
   };
 
+  const maskEndpoint = (url: string) => {
+    try {
+      const parsed = new URL(url);
+      return `${parsed.protocol}//******${parsed.pathname}`;
+    } catch {
+      return url;
+    }
+  };
+
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -69,8 +78,8 @@ export default function DeleteAccountForm({ environment }: DeleteAccountFormProp
           <label className="text-xs font-medium uppercase tracking-wide text-slate-500">Endpoint URL</label>
           <input
             type="text"
-            value={endpoint}
-            onChange={(e) => setEndpoint(e.target.value)}
+            value={maskEndpoint(endpoint)}
+            readOnly
             className="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 font-mono text-xs text-slate-600 outline-none focus:border-rose-400 focus:bg-white focus:ring-2 focus:ring-rose-100"
           />
         </div>
