@@ -101,7 +101,7 @@ export default function MobileOtpForm({ environment }: MobileOtpFormProps) {
         <div className="space-y-1.5">
           <label className="text-xs font-medium uppercase tracking-wide text-slate-500">App Type</label>
           <div className="flex gap-2">
-            {(["imeuswe", "astrologer"] as AppType[]).map((type) => (
+            {(["imeuswe", "astrologer","pandit","videographer"] as AppType[]).map((type) => (
               <button
                 type="button"
                 key={type}
